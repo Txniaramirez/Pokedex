@@ -1,7 +1,7 @@
 const listaPokemon = document.querySelector("#listaPokemon");
 let URL = "https://pokeapi.co/api/v2/pokemon/";
 
-for (let i = 1; i <= 151; i++) {
+for (let i = 1; i <= 300; i++) {
     fetch(URL + i)
         .then((response) => response.json())
         .then(data => mostrarPokemon(data))
@@ -24,9 +24,7 @@ function mostrarPokemon(poke) {
     div.classList.add("pokemon");
     div.innerHTML = `
         <div class="pokemon-imagen">
-            <a href="pokemon.html">
-                <img src="${poke.sprites.other["official-artwork"].front_default}" alt="${poke.name}">
-            </a>
+            <img src="${poke.sprites.other["official-artwork"].front_default}" alt="${poke.name}">
         </div>
         <div class="pokemon-info">
             <div class="nombre-contenedor">
