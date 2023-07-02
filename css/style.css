@@ -104,6 +104,26 @@ main {
     overflow: hidden;
 }
 
+#app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.pokemon-card {
+    border-radius: 1rem;
+    background-color: var(--clr-white);
+    box-shadow: 0 0 3rem -1rem rgba(0, 0, 0, .25);
+    padding-block: 1rem;
+    text-transform: uppercase;
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    width: 30rem;
+}
+
 
 .pokemon-imagen {
     padding-inline: 1rem;
@@ -115,6 +135,19 @@ main {
     width: 100%;
     max-width: 6rem;
 }
+
+.pokemon-imagen-card {
+    padding-inline: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.pokemon-imagen-card img {
+    width: 100%;
+    max-width: 15rem;
+}
+
+
 
 .pokemon-info {
     display: flex;
@@ -161,13 +194,13 @@ main {
     border-radius: 100vmax;
 }
 
-.pokemon-stats {
+.pokemon-peso-altura {
     display: flex;
     gap: 1rem;
     font-size: .85rem;
 }
 
-.stat {
+.altura, .peso {
     background-color: var(--clr-gray);
     padding: .25rem .5rem;
     border-radius: 100vmax;
@@ -316,3 +349,15 @@ main {
     width: 180px;
     border-radius: 50%;
 }
+
+.stats {
+    display: flex;
+    justify-content: space-between;
+    gap: 5rem;
+}
+
+.stat-name {
+    text-transform: capitalize;
+    font-weight: 600;
+}
+
